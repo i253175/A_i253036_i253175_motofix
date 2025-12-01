@@ -1,0 +1,281 @@
+/* CSS for Homepage */
+
+/* Reset all default styles */
+* {
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    box-sizing: border-box; /* Better box sizing */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Font */
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    background-color: white; /* White background */
+    padding: 15px 30px; /* Padding inside */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Shadow below */
+}
+
+/* Logo circle container */
+.logo-circle {
+    width: 60px; /* Circle width */
+    height: 60px; /* Circle height */
+    background-color: #1a3a3a; /* Dark background */
+    border-radius: 50%; /* Make circular */
+    display: flex; /* Flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: hidden; /* Hide overflow */
+    padding: 8px; /* Padding inside */
+}
+
+/* Logo image */
+.logo {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: contain; /* Fit image properly */
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex; /* Flexbox layout */
+    gap: 40px; /* Space between links */
+}
+
+/* Navigation link styling */
+.nav-links a {
+    color: #000; /* Black text */
+    text-decoration: none; /* No underline */
+    font-size: 18px; /* Text size */
+    font-weight: 500; /* Medium weight */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+/* Link hover effect */
+.nav-links a:hover {
+    color: #0d7377; /* Teal on hover */
+}
+
+/* Account section container */
+.account-section {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center items */
+    cursor: pointer; /* Hand cursor */
+}
+
+/* Account icon circle */
+.account-icon {
+    width: 50px; /* Circle width */
+    height: 50px; /* Circle height */
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 50%; /* Circular shape */
+    display: flex; /* Flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 24px; /* Icon size */
+}
+
+/* Account text */
+.account-text {
+    font-size: 12px; /* Small text */
+    margin-top: 5px; /* Space above */
+    color: #333; /* Dark text */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #1a4d4d 0%, #2d7a7a 100%); /* Gradient background */
+    padding: 60px 30px; /* Padding inside */
+    text-align: center; /* Center text */
+}
+
+/* Hero title */
+.hero-title {
+    color: #ffa726; /* Orange color */
+    font-size: 48px; /* Large text */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 30px; /* Space below */
+    text-transform: lowercase; /* Lowercase text */
+}
+
+/* Search container */
+.search-container {
+    max-width: 700px; /* Maximum width */
+    margin: 0 auto; /* Center horizontally */
+    background-color: white; /* White background */
+    padding: 15px 20px; /* Padding inside */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+    gap: 15px; /* Space between items */
+}
+
+/* Search icon */
+.search-icon {
+    font-size: 24px; /* Icon size */
+    color: #666; /* Gray color */
+}
+
+/* Search input field */
+.search-container input {
+    flex: 1; /* Take remaining space */
+    border: none; /* No border */
+    outline: none; /* No outline */
+    font-size: 16px; /* Text size */
+    color: #666; /* Gray text */
+}
+
+/* Search button */
+.search-btn {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 30px; /* Padding inside */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Hand cursor */
+    font-size: 14px; /* Text size */
+    text-transform: lowercase; /* Lowercase text */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+.search-btn:hover {
+    background-color: #555; /* Lighter on hover */
+}
+
+/* Categories Section */
+.categories-section {
+    max-width: 1200px; /* Maximum width */
+    margin: 40px auto; /* Center with space */
+    padding: 0 30px; /* Horizontal padding */
+}
+
+/* Section header */
+.section-header {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+    margin-bottom: 20px; /* Space below */
+}
+
+/* Section title */
+.section-title {
+    font-size: 24px; /* Text size */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark text */
+}
+
+/* Explore link */
+.explore-link {
+    color: #1976d2; /* Blue color */
+    text-decoration: none; /* No underline */
+    font-size: 14px; /* Text size */
+}
+
+/* Explore link hover */
+.explore-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Categories grid */
+.categories-grid {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between cards */
+}
+
+/* Individual category card */
+.category-card {
+    background-color: white; /* White background */
+    padding: 30px; /* Padding inside */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Shadow */
+    cursor: pointer; /* Hand cursor */
+    transition: transform 0.2s; /* Smooth transition */
+}
+
+/* Card hover effect */
+.category-card:hover {
+    transform: translateY(-5px); /* Move up on hover */
+}
+
+/* Category icon container */
+.category-icon {
+    width: 150px; /* Icon width */
+    height: 150px; /* Icon height */
+    background-color: #f0f0f0; /* Light background */
+    margin: 0 auto 15px; /* Center with space below */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Category image */
+.category-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: contain; /* Fit image properly */
+    padding: 10px; /* Padding inside */
+}
+
+/* Category name */
+.category-name {
+    font-size: 14px; /* Text size */
+    font-weight: 500; /* Medium weight */
+    color: #333; /* Dark text */
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+    /* For screens less than 1024px */
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    /* For screens less than 768px */
+    
+    .top-nav {
+        flex-direction: column; /* Stack vertically */
+        gap: 15px; /* Space between items */
+    }
+    
+    .nav-links {
+        gap: 20px; /* Less gap */
+    }
+    
+    .hero-title {
+        font-size: 36px; /* Smaller title */
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* Responsive design for small mobile */
+@media (max-width: 480px) {
+    /* For screens less than 480px */
+    
+    .categories-grid {
+        grid-template-columns: 1fr; /* 1 column */
+    }
+    
+    .nav-links {
+        flex-direction: column; /* Stack links */
+        gap: 10px; /* Less gap */
+    }
+}

@@ -1,0 +1,268 @@
+/* CSS for Shopping Cart page */
+
+/* Reset all styles */
+* {
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    box-sizing: border-box; /* Better sizing */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Font */
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+/* Main cart container */
+.cart-container {
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center container */
+    padding: 30px; /* Padding inside */
+}
+
+/* Cart header section */
+.cart-header {
+    background-color: #0d7377; /* Teal background */
+    color: white; /* White text */
+    padding: 30px; /* Padding inside */
+    margin-bottom: 30px; /* Space below */
+}
+
+/* Main heading */
+h1 {
+    font-size: 28px; /* Text size */
+    margin-bottom: 30px; /* Space below */
+}
+
+/* Progress bar container */
+.progress-bar {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    gap: 0; /* No gap - connectors handle spacing */
+}
+
+/* Individual step */
+.step {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Vertical stack */
+    align-items: center; /* Center items */
+    gap: 10px; /* Space between number and text */
+}
+
+/* Step number circle */
+.step-number {
+    width: 50px; /* Circle width */
+    height: 50px; /* Circle height */
+    border-radius: 50%; /* Make circular */
+    background-color: white; /* White background */
+    color: #0d7377; /* Teal text */
+    display: flex; /* Flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 20px; /* Text size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Active step styling */
+.step.active .step-number {
+    background-color: #FFD700; /* Yellow/gold background */
+    color: #0d7377; /* Teal text */
+}
+
+/* Step label text */
+.step span {
+    font-size: 16px; /* Text size */
+}
+
+/* Connector line between steps */
+.connector {
+    width: 150px; /* Line width */
+    height: 2px; /* Line thickness */
+    background-color: white; /* White line */
+    margin: 0 -10px; /* Negative margin for overlap */
+    align-self: flex-start; /* Align to top */
+    margin-top: 25px; /* Position with step circles */
+}
+
+/* Cart content area */
+.cart-content {
+    display: flex; /* Flexbox layout */
+    gap: 30px; /* Space between sections */
+}
+
+/* Products section */
+.products-section {
+    flex: 2; /* Takes 2/3 of space */
+    background-color: #e8e8e8; /* Light gray background */
+    padding: 30px; /* Padding inside */
+}
+
+/* Products section heading */
+.products-section h2 {
+    font-size: 24px; /* Text size */
+    margin-bottom: 20px; /* Space below */
+    color: #333; /* Dark text */
+}
+
+/* Individual product item */
+.product-item {
+    display: flex; /* Flexbox layout */
+    gap: 20px; /* Space between items */
+    align-items: center; /* Center vertically */
+    background-color: white; /* White background */
+    padding: 20px; /* Padding inside */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Product images container */
+.product-images {
+    display: flex; /* Flexbox for images */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Small gap between car and wiper */
+    position: relative; /* For positioning */
+}
+
+/* Car image styling */
+.car-image {
+    width: 100px; /* Car image width */
+    height: 80px; /* Car image height */
+    object-fit: contain; /* Fit image properly */
+}
+
+/* Wiper image styling */
+.wiper-image {
+    width: 80px; /* Wiper width */
+    height: 80px; /* Wiper height */
+    object-fit: contain; /* Fit image properly */
+    position: relative; /* For layering */
+    margin-left: -20px; /* Overlap slightly with car */
+}
+
+/* Product details section */
+.product-details {
+    flex: 1; /* Takes remaining space */
+}
+
+/* Product name */
+.product-details h3 {
+    font-size: 18px; /* Text size */
+    margin-bottom: 15px; /* Space below */
+    color: #333; /* Dark text */
+}
+
+/* Quantity control section */
+.quantity-control {
+    display: flex; /* Flexbox */
+    align-items: center; /* Center vertically */
+    gap: 15px; /* Space between items */
+}
+
+/* Quantity buttons */
+.qty-btn {
+    width: 30px; /* Button width */
+    height: 30px; /* Button height */
+    border: 1px solid #ccc; /* Gray border */
+    background-color: white; /* White background */
+    cursor: pointer; /* Hand cursor */
+    font-size: 18px; /* Text size */
+    border-radius: 3px; /* Slightly rounded */
+}
+
+/* Button hover effect */
+.qty-btn:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+/* Quantity display */
+.quantity {
+    font-size: 18px; /* Text size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Product price */
+.product-price {
+    font-size: 20px; /* Text size */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark text */
+}
+
+/* Summary section */
+.summary-section {
+    flex: 1; /* Takes 1/3 of space */
+    background-color: #e8e8e8; /* Light gray background */
+    padding: 30px; /* Padding inside */
+    height: fit-content; /* Height fits content */
+}
+
+/* Summary item row */
+.summary-item {
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Space between label and value */
+    margin-bottom: 15px; /* Space below */
+    font-size: 16px; /* Text size */
+}
+
+/* Bold summary items */
+.summary-item.bold {
+    font-weight: bold; /* Bold text */
+}
+
+/* Total row styling */
+.summary-item.total {
+    font-size: 20px; /* Larger text */
+    font-weight: bold; /* Bold text */
+    margin-top: 15px; /* Space above */
+}
+
+/* Horizontal rule */
+hr {
+    border: none; /* No border */
+    border-top: 1px solid #ccc; /* Top border only */
+    margin: 20px 0; /* Space above and below */
+}
+
+/* Continue button */
+.continue-btn {
+    width: 100%; /* Full width */
+    padding: 15px; /* Padding inside */
+    background-color: #2196F3; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 18px; /* Text size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Hand cursor */
+    margin-top: 20px; /* Space above */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+.continue-btn:hover {
+    background-color: #1976D2; /* Darker blue */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    /* For screens less than 768px */
+    
+    .cart-content {
+        flex-direction: column; /* Stack vertically */
+    }
+    
+    .progress-bar {
+        flex-direction: column; /* Stack steps vertically */
+        gap: 20px; /* Space between steps */
+    }
+    
+    .connector {
+        width: 2px; /* Vertical line */
+        height: 50px; /* Line height */
+        margin: 0; /* Reset margin */
+    }
+    
+    .product-item {
+        flex-direction: column; /* Stack items */
+        text-align: center; /* Center text */
+    }
+}
