@@ -1,0 +1,155 @@
+/* CSS styling for About Us page */
+
+/* Reset default styles for all elements */
+* {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Better box model */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Font for all text */
+    background-color: #d9d9d9; /* Light gray background for top section */
+}
+
+/* Header styling */
+.main-header {
+    background-color: #d9d9d9; /* Light gray background */
+    padding: 20px 50px; /* Space inside header */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+    border-bottom: 2px solid #0d7377; /* Teal bottom border */
+}
+
+/* Logo section (left side of header) */
+.logo-section {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+}
+
+/* Circle container for logo */
+.logo-circle {
+    width: 80px; /* Circle width */
+    height: 80px; /* Circle height */
+    border-radius: 50%; /* Makes it circular */
+    background-color: #2c3e50; /* Dark background */
+    display: flex; /* Flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    overflow: hidden; /* Hide overflow */
+    padding: 10px; /* Padding inside circle */
+}
+
+/* Logo image styling */
+.logo {
+    width: 100%; /* Full width of circle */
+    height: 100%; /* Full height of circle */
+    object-fit: contain; /* Fits image properly */
+}
+
+/* Account link styling */
+.account-link {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack icon and text */
+    align-items: center; /* Center horizontally */
+    font-size: 12px; /* Small text */
+    color: #333; /* Dark gray text */
+    cursor: pointer; /* Hand cursor on hover */
+    margin-left: auto; /* Push to right side */
+}
+
+/* Account icon styling */
+.account-icon {
+    font-size: 32px; /* Large icon */
+    color: #6c5ce7; /* Purple color */
+}
+
+/* Navigation menu styling */
+.main-nav {
+    display: flex; /* Flexbox for horizontal menu */
+    gap: 40px; /* Space between menu items */
+}
+
+/* Navigation link styling */
+.main-nav a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark gray text */
+    font-size: 24px; /* Large text */
+    font-weight: 600; /* Semi-bold */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+/* Navigation link hover effect */
+.main-nav a:hover {
+    color: #0d7377; /* Changes to teal on hover */
+}
+
+/* Main content area styling */
+.about-content {
+    background-color: #0d7377; /* Teal background */
+    padding: 50px 100px; /* Space around content */
+    color: white; /* White text */
+}
+
+/* About section styling */
+.about-section {
+    margin-bottom: 50px; /* Space below section */
+}
+
+/* Main heading styling */
+h1 {
+    color: #FF9800; /* Orange color */
+    font-size: 42px; /* Large size */
+    margin-bottom: 30px; /* Space below heading */
+    text-align: left; /* Align to left */
+}
+
+/* Secondary heading styling */
+h2 {
+    color: #FF9800; /* Orange color */
+    font-size: 42px; /* Large size */
+    margin-bottom: 30px; /* Space below heading */
+    text-align: left; /* Align to left */
+}
+
+/* Paragraph styling */
+p {
+    font-size: 18px; /* Text size */
+    line-height: 1.8; /* Space between lines */
+    margin-bottom: 20px; /* Space below paragraph */
+    text-align: left; /* Left aligned text */
+}
+
+/* Mission section styling */
+.mission-section {
+    margin-top: 40px; /* Space above section */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    /* When screen is less than 768px wide */
+    
+    .main-header {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px; /* Less padding */
+    }
+    
+    .main-nav {
+        margin-top: 20px; /* Space above nav */
+        gap: 20px; /* Less gap between items */
+    }
+    
+    .about-content {
+        padding: 30px; /* Less padding */
+    }
+    
+    h1, h2 {
+        font-size: 32px; /* Smaller heading */
+    }
+    
+    p {
+        font-size: 16px; /* Smaller text */
+    }
+}

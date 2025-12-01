@@ -1,0 +1,212 @@
+/* CSS for Contact Us page */
+
+/* Reset all default styles */
+* {
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    box-sizing: border-box; /* Better box sizing */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Font family */
+    background-color: #d9d9d9; /* Light gray */
+}
+
+/* Header styling */
+.main-header {
+    background-color: #d9d9d9; /* Light gray background */
+    padding: 20px 50px; /* Padding inside */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+    border-bottom: 2px solid #0d7377; /* Teal border */
+}
+
+/* Logo section styling */
+.logo-section {
+    display: flex; /* Flexbox */
+    align-items: center; /* Center vertically */
+    gap: 30px; /* Space between items */
+}
+
+/* Logo image styling */
+.logo {
+    width: 80px; /* Logo width */
+    height: 80px; /* Logo height */
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Fit image */
+}
+
+/* Account link styling */
+.account-link {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Vertical stack */
+    align-items: center; /* Center items */
+    font-size: 12px; /* Small text */
+    color: #333; /* Dark text */
+    cursor: pointer; /* Hand cursor */
+    margin-left: auto; /* Push to right side */
+}
+
+/* Account icon styling */
+.account-icon {
+    font-size: 32px; /* Large icon */
+    color: #6c5ce7; /* Purple color */
+}
+
+/* Navigation styling */
+.main-nav {
+    display: flex; /* Flexbox */
+    gap: 40px; /* Space between links */
+}
+
+/* Navigation link styling */
+.main-nav a {
+    text-decoration: none; /* No underline */
+    color: #333; /* Dark text */
+    font-size: 24px; /* Large text */
+    font-weight: 600; /* Semi-bold */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+/* Link hover effect */
+.main-nav a:hover {
+    color: #0d7377; /* Teal on hover */
+}
+
+/* Main content styling */
+.contact-content {
+    background-color: #0d7377; /* Teal background */
+    padding: 50px 100px; /* Padding around content */
+    color: white; /* White text */
+    min-height: 100vh; /* Full height */
+}
+
+/* Main heading styling */
+h1 {
+    color: #FF9800; /* Orange color */
+    font-size: 42px; /* Large size */
+    margin-bottom: 20px; /* Space below */
+    text-align: left; /* Left aligned */
+}
+
+/* Intro text styling */
+.intro-text {
+    font-size: 16px; /* Normal size */
+    margin-bottom: 30px; /* Space below */
+    line-height: 1.6; /* Line spacing */
+}
+
+/* Contact form styling */
+.contact-form {
+    max-width: 600px; /* Maximum width */
+    margin-bottom: 50px; /* Space below */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Vertical stack */
+    gap: 20px; /* Space between inputs */
+}
+
+/* Input and textarea styling */
+.contact-form input,
+.contact-form textarea {
+    padding: 15px; /* Padding inside */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Text size */
+    background-color: #f0f0f0; /* Light background */
+    color: #333; /* Dark text */
+}
+
+/* Placeholder text color */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999; /* Gray placeholder */
+}
+
+/* Textarea specific styling */
+textarea {
+    resize: vertical; /* Allow vertical resize only */
+    font-family: Arial, sans-serif; /* Same font */
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #2196F3; /* Blue color */
+    color: white; /* White text */
+    padding: 15px; /* Padding inside */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Text size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Hand cursor */
+    max-width: 200px; /* Button width */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+.submit-btn:hover {
+    background-color: #1976D2; /* Darker blue */
+}
+
+/* Contact info section styling */
+.contact-info {
+    margin-top: 40px; /* Space above */
+}
+
+/* Section heading styling */
+h2 {
+    color: #FF9800; /* Orange color */
+    font-size: 36px; /* Large size */
+    margin-bottom: 30px; /* Space below */
+}
+
+/* Contact details container */
+.contact-details {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Vertical stack */
+    gap: 25px; /* Space between items */
+}
+
+/* Single contact item styling */
+.contact-item {
+    display: flex; /* Flexbox */
+    align-items: center; /* Center vertically */
+    gap: 15px; /* Space between icon and text */
+    font-size: 18px; /* Text size */
+}
+
+/* Contact icon image styling */
+.contact-icon {
+    width: 32px; /* Icon width */
+    height: 32px; /* Icon height */
+    object-fit: contain; /* Maintain aspect ratio */
+    filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    /* For screens less than 768px */
+    
+    .main-header {
+        flex-direction: column; /* Stack vertically */
+        padding: 20px; /* Less padding */
+    }
+    
+    .main-nav {
+        margin-top: 20px; /* Space above */
+        gap: 20px; /* Less gap */
+    }
+    
+    .contact-content {
+        padding: 30px; /* Less padding */
+    }
+    
+    h1 {
+        font-size: 32px; /* Smaller heading */
+    }
+    
+    h2 {
+        font-size: 28px; /* Smaller heading */
+    }
+}
