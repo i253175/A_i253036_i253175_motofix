@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Motofix</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+
+    <div class="cart-container">
+
+        <div class="cart-header">
+
+            <h1>Shopping Cart</h1>
+
+            <div class="progress-bar">
+
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <span>Cart</span>
+                </div>
+
+                <div class="connector"></div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <span>Address</span>
+                </div>
+
+                <div class="connector"></div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <span>Checkout</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-content">
+
+            <div class="products-section">
+
+                <h2>Gaari Parts</h2>
+
+                <div class="product-item">
+
+                    <div class="product-images">
+                        <img src="images/nissan-wingroad.png" alt="Nissan Wingroad Car" class="car-image">
+                        <img src="images/wiper.png" alt="Wiper Blades" class="wiper-image">
+                    </div>
+
+                    <div class="product-details">
+                        <h3>Nissan Wing Road (2016-2018) Aero design Soft Wiper</h3>
+
+                        <div class="quantity-control">
+                            <button class="qty-btn minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <span>PKR 2,900</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-section">
+
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span class="subtotal-amount">PKR 2,900</span>
+                </div>
+
+                <div class="summary-item">
+                    <span>Shipping</span>
+                    <span class="shipping-amount">PKR 199</span>
+                </div>
+
+                <div class="summary-item">
+                    <span>Receive Between</span>
+                    <span>18-20 Nov</span>
+                </div>
+
+                <hr>
+
+                <div class="summary-item bold">
+                    <span class="total-items">1 Total item</span>
+                </div>
+
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span class="subtotal-amount">PKR 2,900</span>
+                </div>
+
+                <div class="summary-item">
+                    <span>Shipping</span>
+                    <span class="shipping-amount">PKR 199</span>
+                </div>
+
+                <div class="summary-item">
+                    <span>Sales Tax 2%</span>
+                    <span class="tax-amount">PKR 141</span>
+                </div>
+
+                <div class="summary-item total">
+                    <span>Total (incl.tax)</span>
+                    <span class="total-amount">PKR 3,240</span>
+                </div>
+
+                <button class="continue-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/cart.js"></script>
+
+</body>
+</html>
