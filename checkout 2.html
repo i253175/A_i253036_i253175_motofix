@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Moto Fix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a4d4d 0%, #2d7a7a 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .checkout-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .page-title {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Progress Steps */
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #4a9d9d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .step.completed .step-number {
+            background-color: #6db6f2;
+        }
+
+        .step.active .step-number {
+            background-color: #000;
+        }
+
+        .step-label {
+            color: white;
+            font-size: 14px;
+        }
+
+        .step.active .step-label {
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Checkout Card */
+        .checkout-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .security-badge {
+            background-color: #c8e6c9;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .lock-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #4caf50;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .security-text {
+            color: #2e7d32;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Checkout Details */
+        .checkout-details {
+            padding: 25px;
+        }
+
+        .details-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .detail-label {
+            color: #666;
+        }
+
+        .detail-value {
+            font-weight: 500;
+        }
+
+        /* Payment Methods */
+        .payment-methods {
+            padding: 0 25px 25px;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .payment-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .payment-name {
+            font-size: 15px;
+            color: #333;
+        }
+
+        /* Total Section */
+        .total-section {
+            padding: 25px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .total-label {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .total-amount {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .continue-btn {
+            background-color: #0066ff;
+            color: white;
+            border: none;
+            padding: 15px 60px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="header">
+            <button class="back-btn">←</button>
+            <h1 class="page-title">Checkout</h1>
+        </div>
+
+        <div class="progress-steps">
+            <div class="step completed">
+                <div class="step-number">✓</div>
+                <div class="step-label">Cart</div>
+            </div>
+            <div class="step completed">
+                <div class="step-number">✓</div>
+                <div class="step-label">Address</div>
+            </div>
+            <div class="step active">
+                <div class="step-number">3</div>
+                <div class="step-label">Checkout</div>
+            </div>
+        </div>
+
+        <div class="checkout-card">
+            <div class="security-badge">
+                <div class="lock-icon">🔒</div>
+                <div class="security-text">Your Transaction is Guaranteed To Be 100% Secure</div>
+            </div>
+
+            <div class="checkout-details">
+                <h2 class="details-title">Checkout Details</h2>
+                <div class="detail-row">
+                    <span class="detail-label">Sub Total</span>
+                    <span class="detail-value">PKR 10,588</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Shipping Charges</span>
+                    <span class="detail-value">PKR 398</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Sales Tax 2%</span>
+                    <span class="detail-value">PKR 220</span>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <div class="payment-option">
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-name">Debit/Credit Card</div>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon">💰</div>
+                    <div class="payment-name">Jazz Cash</div>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon">📱</div>
+                    <div class="payment-name">Easy Paisa</div>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon">🏦</div>
+                    <div class="payment-name">Online Bank Transfer</div>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon">🚚</div>
+                    <div class="payment-name">Cash On Delivery</div>
+                </div>
+            </div>
+
+            <div class="total-section">
+                <div>
+                    <div class="total-label">Total (incl.Tax)</div>
+                    <div class="total-amount">PKR 11,206</div>
+                </div>
+                <button class="continue-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
