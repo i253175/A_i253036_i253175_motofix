@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Moto Fix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        .header {
+            background-color: #2c2c2c;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .filter-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #d32f2f;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .search-box {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+        }
+
+        /* Filter Buttons */
+        .filter-buttons {
+            background-color: #1a1a1a;
+            padding: 10px 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        /* Product Container */
+        .product-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            display: flex;
+        }
+
+        .product-image-section {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-counter {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        .thumbnail {
+            width: 80px;
+            margin-top: 10px;
+        }
+
+        .product-info-section {
+            width: 50%;
+            padding: 20px;
+            border-left: 1px solid #e0e0e0;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .shipping-info {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .cart-btn, .wishlist-btn {
+            padding: 12px 30px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .about-section {
+            margin-top: 30px;
+        }
+
+        .about-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .about-subtitle {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .about-text {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .read-more {
+            color: #1976d2;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Seller Section */
+        .seller-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .seller-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+        }
+
+        .seller-name {
+            font-weight: bold;
+        }
+
+        .seller-date {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .reviews {
+            margin-left: auto;
+        }
+
+        .stars {
+            color: #ffc107;
+        }
+
+        /* Shipping Policy */
+        .shipping-policy {
+            margin-top: 30px;
+        }
+
+        .policy-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .policy-badges {
+            display: flex;
+            gap: 10px;
+        }
+
+        .badge {
+            width: 50px;
+            height: 50px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="filter-icon">☰</div>
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="text" placeholder="Honda Accord CL7 Brake Pads">
+        </div>
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn">Brake Pads</button>
+        <button class="filter-btn">Bumpers</button>
+        <button class="filter-btn">Bonnets</button>
+        <button class="filter-btn">Air flows</button>
+        <button class="filter-btn">Doors</button>
+        <button class="filter-btn">Insulation Sheets</button>
+        <button class="filter-btn">Chrome Trims</button>
+    </div>
+
+    <div class="product-container">
+        <div class="product-image-section">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/400x300/fff/000?text=Honda+Accord+Brake+Pads" alt="Product">
+                <div class="image-counter">1/2</div>
+            </div>
+        </div>
+
+        <div class="product-info-section">
+            <div class="product-title">
+                Honda Accord CL7/CL9<br>
+                (2002-2008) Asuki Advanced<br>
+                Ceramic Brake Pads(Front)
+            </div>
+            <div class="product-price">PKR 6,839</div>
+            
+            <div class="shipping-info">
+                <button class="cart-btn">🛒 Add to Cart</button>
+                <button class="wishlist-btn">♥</button>
+            </div>
+
+            <div class="about-section">
+                <div class="about-title">About This Item</div>
+                <div class="about-subtitle">Honda Accord CL7/CL9 Asuki Advanced Front Brake Pads.</div>
+                <div class="about-text">
+                    The Top Quality formulation for your car to pedal free from the very first stop, with less noise, dust and fade, along with increased stopping power.
+                </div>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+
+            <div class="seller-section">
+                <div class="seller-icon"></div>
+                <div>
+                    <div class="seller-name">Gaari Parts</div>
+                    <div class="seller-date">Member Since: 01.13.2024</div>
+                </div>
+                <div class="reviews">
+                    <div>Reviews</div>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="shipping-policy">
+                <div class="policy-title">Shipping Time & Return Policy</div>
+                <div>Estimated Delivery Time: 5 to 7 Days</div>
+                <div>Return Policy: Contact our team for help with your order</div>
+                <div class="policy-badges">
+                    <div class="badge"></div>
+                    <div class="badge"></div>
+                    <div class="badge"></div>
+                    <div class="badge"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

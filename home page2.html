@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Moto Fix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background-color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-color: #1a3a3a;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .account-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #1a4d4d 0%, #2d7a7a 100%);
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .hero-title {
+            color: #ffa726;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .search-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .search-icon {
+            font-size: 24px;
+            color: #666;
+        }
+
+        .search-container input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Categories Section */
+        .categories-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 30px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .explore-link {
+            color: #1976d2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #e0e0e0;
+            margin: 0 auto 15px;
+            border-radius: 10px;
+        }
+
+        .category-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="logo"></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Buy</a>
+            <a href="#">Dealers</a>
+            <a href="#">Reviews</a>
+        </div>
+        <div class="account-icon">👤</div>
+    </div>
+
+    <div class="hero-section">
+        <h1 class="hero-title">moto fix</h1>
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Search Products For Your Vehicle">
+            <button class="search-btn">search</button>
+        </div>
+    </div>
+
+    <div class="categories-section">
+        <div class="section-header">
+            <h2 class="section-title">Browse Categories & Car Parts</h2>
+            <a href="#" class="explore-link">Explore more parts</a>
+        </div>
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="category-icon"></div>
+                <div class="category-name">Brakes</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon"></div>
+                <div class="category-name">Oils and filters</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon"></div>
+                <div class="category-name">Interior</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon"></div>
+                <div class="category-name">Exterior</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon"></div>
+                <div class="category-name">Engine and Mechanical</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon"></div>
+                <div class="category-name">Car Care</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon"></div>
+                <div class="category-name">Lights and Electrical</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon"></div>
+                <div class="category-name">Audio/Video</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
