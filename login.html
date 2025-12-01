@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- This tells the browser this is an HTML5 document -->
+<html lang="en">
+<!-- The main container for the webpage, lang="en" means English language -->
+
+<head>
+    <!-- Head section contains information about the page -->
+    <meta charset="UTF-8">
+    <!-- This sets character encoding to support all characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This makes the website responsive on mobile devices -->
+    <title>Login / Signup - Motofix</title>
+    <!-- The title that appears in browser tab -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- This links to our CSS file for styling -->
+</head>
+
+<body>
+    <!-- Body section contains all visible content -->
+    
+    <!-- Main container for login form -->
+    <div class="login-container">
+        <!-- This div holds everything on the page -->
+        
+        <!-- Heading for the page -->
+        <h1>Login / Signup</h1>
+        <!-- h1 is the main heading tag -->
+        
+        <!-- Form element for user input -->
+        <form id="loginForm">
+            <!-- Form with id so we can access it with JavaScript -->
+            
+            <!-- Email input field -->
+            <input type="email" id="email" placeholder="Email" required>
+            <!-- type="email" validates email format, placeholder shows hint text, required means must fill -->
+            
+            <!-- Password input field -->
+            <input type="password" id="password" placeholder="Password" required>
+            <!-- type="password" hides the text with dots -->
+            
+            <!-- Container for login button and forgot password link -->
+            <div class="button-row">
+                <!-- This div helps arrange items in a row -->
+                
+                <!-- Login button -->
+                <button type="submit" class="login-btn">Login</button>
+                <!-- type="submit" means clicking will submit the form -->
+                
+                <!-- Forgot password link -->
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                <!-- a tag creates clickable links, # means it doesn't go anywhere yet -->
+            </div>
+        </form>
+        
+        <!-- OR divider text -->
+        <p class="divider">OR</p>
+        <!-- p tag is for paragraph text -->
+        
+        <!-- Social login buttons section -->
+        <div class="social-login">
+            <!-- Container for social login buttons -->
+            
+            <!-- Google login button -->
+            <button class="social-btn google-btn">
+                <!-- Button for Google login -->
+                <span class="google-icon">G</span>
+                <!-- Span for the Google G icon -->
+                Continue with Google
+            </button>
+            
+            <!-- Email login button -->
+            <button class="social-btn email-btn">
+                <!-- Button for email login -->
+                <span class="email-icon"> <img src="11.jpg" alt="My Photo" width="22" height="22">
+</span>
+                <!-- Email icon using unicode character -->
+                Continue with Email
+            </button>
+        </div>
+    </div>
+    
+    <!-- Link to JavaScript file -->
+    <script src="js/login.js"></script>
+    <!-- This loads our JavaScript for interactivity -->
+</body>
+</html>
